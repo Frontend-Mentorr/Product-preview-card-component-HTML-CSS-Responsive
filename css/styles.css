@@ -1,0 +1,221 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Fraunces:wght@100..900&display=swap');
+
+/*-----CSS RESET: -Universal selector to reset default browser styles-----*/
+* {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+}
+/*-----declaring the root pseudo-class to use global color variables  styles to use them across the html doc-----*/
+/* DON'T USE UNDERSCORE IN THE VARIABLE NAMES ONLY DASH */
+:root {
+  --color-Dark-Green: hsl(135, 59%, 26%); /* Primary*/
+  --color-Cream: hsl(30, 38%, 92%); /* Primary*/
+  --color-White: hsl(0, 0%, 100%);
+  --color-Dark-Turquoise: hsl(182, 82%, 25%);
+  --color-Light-Green: hsl(135, 86%, 37%);
+  --color-Black: hsl(0, 0%, 0%);
+}
+
+/* Decorative styles */ /* Query for mobiles */
+
+/* --------------MOBILE FIRST------------ */
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* This ensures that the total height is at least the height of the viewport */
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-Cream);
+}
+
+main {
+  flex: 1 0 auto; /* This allows the main content to grow and shrink but not shrink smaller than its content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.2rem;
+  background-color: var(--color-Cream);
+}
+
+.articleContainer {
+  width: 100%;
+  min-height: 700px; /* Use min-height to accommodate varying content sizes */
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  border-radius: 15px;
+  align-items: left;
+  margin-bottom: 2rem;
+  background-color: var(--color-White);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 15px 15px 0px 0px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-kerning: normal;
+  color: var(  --color-Dark-Turquoise);
+}
+
+h2 {
+  font-family: 'Montserrat', serif;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.2em;
+  font-kerning: normal;
+  color: var(--color-Dark-Green);
+  margin-top: 1rem;
+}
+h3 {
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  font-size: 16px;
+  font-kerning: normal;
+  color: var(--color-Dark-Turquoise);
+}
+
+p {
+  font-family: 'Montserrat', serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--color-Dark-Gray-Green);
+  margin-bottom: 2rem;
+}
+
+.price {
+  position: relative; /* Enables positioning of pseudo-elements relative to this element */
+  font-size: 2.5rem;
+  font-family: 'Fraunces', serif;
+  font-weight: 800;
+  color: var(--color-Dark-Green);
+  padding: 0px; /* Adjust padding as needed */
+  /* background-color: aqua; */
+}
+
+.price::after {
+  content: '$169.99'; /* Old price */
+  font-family: 'Montserrat', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--color-Black);
+  text-decoration: line-through; /* Creates the strike-through effect */
+  position: absolute; /* Positions this element out of the normal flow, relative to its nearest positioned ancestor */
+  top: 0px; /* This moves the pseudo-element above the container */
+  left: 170px; /* Aligns the pseudo-element to the right of the nre price */
+  background-color: rgba(255, 255, 255, 0.7); /* Optional background to increase readability */
+}
+
+.myButton {
+  width: 100%;
+  height: 3.5rem;
+  border-style: none;
+  border-radius: 7px;
+  color: var(--color-White);
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background-color: var(--color-Dark-Green);
+}
+
+.myButton:hover {
+  background-color: var(--color-Light-Green);
+  cursor: pointer;
+  /* color: var(--color-Dark-Green); */
+}
+
+.chart-icon::before {
+  font-family: 'Font Awesome 5 Free'; /* This is needed to ensure the correct font is used */
+  content: '\f07a'; /* This is the unicode for the fa-chart-bar icon */
+  color: white; /* Set the color */
+  size: 0.5rem;
+  font-weight: 900; /* Font Awesome requires 900 weight for solid icons */
+}
+
+footer {
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.attribution {
+  text-align: center;
+  margin-bottom: 2rem; /* Keeps the footer at the bottom but only after all other content */
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+/* --------------MEDIA QUERIES------------ */
+
+/* --------------DESKTOP------------ */
+
+@media (min-width: 450px) {
+  html,
+  body {
+    height: 100vh; /* This ensures that the body takes the full viewport height */
+    background-color: var(--color-Cream);
+  }
+  main {
+    background-color: var(--color-Cream);
+  }
+
+  .articleContainer {
+    flex-direction: row;
+    max-width: 45rem; /* Use min-height to accommodate varying content sizes */
+    min-height: 1rem; /* 🚩Using max-height to allow content to expand. This was the solution for the bg 🐞*/
+    align-items: stretch;
+    overflow: hidden; /* ❓❓Maintains border-radius for children elements */
+    padding: 0rem;
+    margin-top: 10rem;
+  }
+
+  img {
+    width: 50%;
+    height: auto; /* Keep it to 'auto' for maintaining aspect ratio */
+    object-fit: cover; /* Maintains aspect ratio */
+    /* Remove the height property to allow the aspect ratio to dictate the image's height */
+    object-position: center; /* or top, bottom, left, right, etc., to adjust the visible area */
+    border-radius: 15px 0px 0px 15px;
+    margin-bottom: 0px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Ensures the text content takes up the other half */
+    margin-top: 1.5rem;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+}
