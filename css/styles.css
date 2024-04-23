@@ -178,7 +178,7 @@ footer {
 
 /* --------------DESKTOP------------ */
 
-@media (min-width: 450px) {
+ @media (min-width: 450px) { /*Apply these to screens that are at least 450 pixels wide or larger. */
   html,
   body {
     height: 100vh; /* This ensures that the body takes the full viewport height */
