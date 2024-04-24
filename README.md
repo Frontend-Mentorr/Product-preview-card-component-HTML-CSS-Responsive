@@ -1,6 +1,6 @@
-# Frontend Mentor - QR code component solution
+# Frontend Mentor - Product preview card component solution
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -25,8 +25,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: (https://github.com/Frontend-Mentorr/Product-preview-card-component-HTML-CSS-Responsive)
-- Live Site URL: (https://frontend-mentorr.github.io/Product-preview-card-component-HTML-CSS-Responsive/)
+- Solution URL: (https://github.com/Junbol-Frontend-Mentor/Product-preview-card-component-HTML-CSS-Responsive)
+- Live Site URL: (https://junbol-frontend-mentor.github.io/Product-preview-card-component-HTML-CSS-Responsive/)
 
 ## My process
 
