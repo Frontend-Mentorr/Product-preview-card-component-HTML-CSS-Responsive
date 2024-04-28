@@ -49,8 +49,8 @@ main {
   width: 100%;
   min-height: 700px; /* Use min-height to accommodate varying content sizes */
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   border-radius: 15px;
   align-items: center;
   margin-bottom: 2rem;
